@@ -19,11 +19,14 @@ public class FirstWork {
 
     public static boolean taskFour(int a, int b) {
         int c = a + b;
-        if ((c >= 10) && (c <= 20)) {
-            return true;
-        } else {
-            return false;
-        }
+
+        // boolean bool = sum >= 10 && sum <= 20;
+        // return bool; Краткая запись
+
+        boolean b1;
+        if ((c >= 10) && (c <= 20)) b1 = true;
+        else b1 = false;
+        return b1;
     }
 
     public static void taskFive(int a) {
@@ -36,7 +39,7 @@ public class FirstWork {
     }
 
     public static boolean taskSix(int a) {
-        if (a<= 0) { return true;
+        if (a < 0) { return true;
         } else {
             return false;
         }
