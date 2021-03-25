@@ -40,16 +40,15 @@ public class ConfigurationDialog extends JDialog implements Configurable {
         setVisible(true);
     }
 
-    /**
-     * В данном методе создается панель, на которой отображаются текстовые метки и
-     * компонент параметра (радио кнопки и поле для ввода размерности карты).
-     *
-     * Панель строится на основе элемента таблицы (GridLayout)
-     * --------------------------------------------------------------
-     * | метка с информацией | компонент выбора крестика или нолика |
-     * | метка с информацией | поле для ввода размерности карты    |
-     * ------------------------------------------------------------
-     */
+
+//   В данном методе создается панель, на которой отображаются текстовые метки и
+//   компонент параметра (радио кнопки и поле для ввода размерности карты).
+//   Панель строится на основе элемента таблицы (GridLayout)
+//   --------------------------------------------------------------
+//   метка с информацией | компонент выбора крестика или нолика
+//   метка с информацией | поле для ввода размерности карты
+//    ------------------------------------------------------------
+
     private JPanel getConfigurationPanel(JTextField mapSizeTextField) {
         int gridSize = 2;
         int horizontalGap = 10; // отступ по горизонтали между компонентами
@@ -64,11 +63,10 @@ public class ConfigurationDialog extends JDialog implements Configurable {
         return commonPanel;
     }
 
-    /**
-     * В методе создается кнопка завершения игры
-     *
-     * @param mapSizeTextField текстовое поле, из которого надо вытащить размерность игровой карты
-     */
+
+//     В методе создается кнопка завершения игры
+//     @param mapSizeTextField текстовое поле, из которого надо вытащить размерность игровой карты
+
     private JButton createApplyButton(JTextField mapSizeTextField) {
         JButton applyButton = new JButton("Принять");
 
@@ -84,9 +82,9 @@ public class ConfigurationDialog extends JDialog implements Configurable {
         return applyButton;
     }
 
-    /**
-     * В методе создается панель с кнопками для выбора крестика или нолика.
-     */
+
+//В методе создается панель с кнопками для выбора крестика или нолика.
+
     private JPanel createChoiceButtonPanel() {
         JRadioButton xButtonChoice = getRadioButton("X", DotType.X, true);
         JRadioButton oButtonChoice = getRadioButton("O", DotType.O, false);
@@ -103,14 +101,13 @@ public class ConfigurationDialog extends JDialog implements Configurable {
         return buttonPanel;
     }
 
-    /**
-     * Метод создает RadioButton и добавляет ей обработчик,
-     * который по клику устанавливает выбранным крестик или нолик
-     *
-     * @param text текст кнопки
-     * @param buttonDotType тип кнопки (X или O)
-     * @param selected выбрано ли поле по умолчанию
-     */
+
+//     Метод создает RadioButton и добавляет ей обработчик,
+//     который по клику устанавливает выбранным крестик или нолик
+//     @param text текст кнопки
+//     @param buttonDotType тип кнопки (X или O)
+//     @param selected выбрано ли поле по умолчанию
+
     private JRadioButton getRadioButton(String text, DotType buttonDotType, boolean selected) {
         JRadioButton choiceBtn = new JRadioButton(text, selected);
         choiceBtn.addActionListener(new ActionListener() {
